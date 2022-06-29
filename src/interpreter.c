@@ -6,7 +6,7 @@
 /*   By: sel-kham <sel-kham@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 17:19:59 by sel-kham          #+#    #+#             */
-/*   Updated: 2022/06/28 18:08:18 by sel-kham         ###   ########.fr       */
+/*   Updated: 2022/06/29 00:57:10 by sel-kham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,31 @@ t_interpreter	*init_interpreter(char *eq)
 	return (intrp);
 }
 
-void	get_next_token(t_interpreter *intrp)
+void	*get_next_token(t_interpreter *intrp)
 {
-	
+	char	*problem;
+	t_token	*token;
+	char	current_char;
+
+	problem = intrp->problem;
+	current_char = intrp->problem[intrp->index];
+	if (intrp->index > strlen(problem) - 1)
+	{
+		token = init_token(EOL, NULL);
+		return (token);
+	}
+	else if (isdigit(current_char))
+	{
+		token = init_token(INT, &current_char);
+		intrp->index++;
+		return (token);
+	}
+	else if (current_char == '+')
+	{
+		token = init_token(PLUS, &current_char);
+		intrp->index++;
+		return (token);
+	}
+	else
+		print_error("Error parsing");
 }
