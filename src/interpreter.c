@@ -6,7 +6,7 @@
 /*   By: sel-kham <sel-kham@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 17:19:59 by sel-kham          #+#    #+#             */
-/*   Updated: 2022/06/29 00:57:10 by sel-kham         ###   ########.fr       */
+/*   Updated: 2022/06/30 18:12:39 by sel-kham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	*get_next_token(t_interpreter *intrp)
 
 	problem = intrp->problem;
 	current_char = intrp->problem[intrp->index];
-	if (intrp->index > strlen(problem) - 1)
+	if ((unsigned long) intrp->index > strlen(problem) - 1)
 	{
 		token = init_token(EOL, NULL);
 		return (token);
@@ -52,4 +52,5 @@ void	*get_next_token(t_interpreter *intrp)
 	}
 	else
 		print_error("Error parsing");
+	return (NULL);
 }
