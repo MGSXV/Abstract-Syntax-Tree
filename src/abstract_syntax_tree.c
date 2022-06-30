@@ -6,7 +6,7 @@
 /*   By: sel-kham <sel-kham@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 15:47:49 by sel-kham          #+#    #+#             */
-/*   Updated: 2022/06/28 17:59:29 by sel-kham         ###   ########.fr       */
+/*   Updated: 2022/06/30 21:21:45 by sel-kham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 
 int	main(void)
 {
-	printf("test\n");
+	char	*cmd;
+
+	cmd = NULL;
+	while (true)
+	{
+		cmd = readline("Tokenizer > ");
+	}
+	
 	return (0);
 }

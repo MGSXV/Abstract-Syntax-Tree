@@ -6,7 +6,7 @@
 /*   By: sel-kham <sel-kham@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 15:48:00 by sel-kham          #+#    #+#             */
-/*   Updated: 2022/06/29 00:59:58 by sel-kham         ###   ########.fr       */
+/*   Updated: 2022/06/30 19:01:10 by sel-kham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,12 @@
 # include<stdlib.h>
 # include<stdbool.h>
 # include<ctype.h>
+# include<readline/readline.h>
+# include<readline/history.h>
 # include "tokenizer.h"
 # include "interpreter.h"
 
 void	print_error(const char *err_msg);
+void	print_prompt(const char *prmpt);
 
 #endif
