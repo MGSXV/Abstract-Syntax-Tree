@@ -6,7 +6,7 @@
 /*   By: sel-kham <sel-kham@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 15:48:00 by sel-kham          #+#    #+#             */
-/*   Updated: 2022/06/30 19:01:10 by sel-kham         ###   ########.fr       */
+/*   Updated: 2022/06/30 21:43:52 by sel-kham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,12 @@
 
 void	print_error(const char *err_msg);
 void	print_prompt(const char *prmpt);
+
+typedef struct s_operation
+{
+	int		left;
+	char	op;
+	int		right;
+}	t_operation;
 
 #endif
