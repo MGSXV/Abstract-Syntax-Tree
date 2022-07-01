@@ -6,7 +6,7 @@
 /*   By: sel-kham <sel-kham@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 17:06:34 by sel-kham          #+#    #+#             */
-/*   Updated: 2022/06/28 18:01:04 by sel-kham         ###   ########.fr       */
+/*   Updated: 2022/07/01 00:48:02 by sel-kham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	print_token(t_token token)
 {
-	printf("Token(%d, %s);\n", token.e_type, token.value);
+	printf("Token(%d, %c);\n", token.e_type, token.value);
 }
 
-t_token	*init_token(int type, char *value)
+t_token	*init_token(int type, char value)
 {
 	t_token	*token;
 
