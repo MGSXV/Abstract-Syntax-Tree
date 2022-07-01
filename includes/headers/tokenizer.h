@@ -6,7 +6,7 @@
 /*   By: sel-kham <sel-kham@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 17:28:34 by sel-kham          #+#    #+#             */
-/*   Updated: 2022/06/28 18:05:56 by sel-kham         ###   ########.fr       */
+/*   Updated: 2022/07/01 00:48:19 by sel-kham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ typedef struct s_token
 		INT,
 		EOL
 	}	e_type;
-	char	*value;
+	char	value;
 }	t_token;
 
 void	print_token(t_token token);
-t_token	*init_token(int type, char *value);
+t_token	*init_token(int type, char value);
 
 #endif
