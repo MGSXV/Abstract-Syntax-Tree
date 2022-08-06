@@ -6,7 +6,7 @@
 /*   By: sel-kham <sel-kham@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 15:47:49 by sel-kham          #+#    #+#             */
-/*   Updated: 2022/06/30 22:44:18 by sel-kham         ###   ########.fr       */
+/*   Updated: 2022/08/06 22:53:04 by sel-kham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,16 @@
 int	main(void)
 {
 	char	*cmd;
+	t_list	*stack;
 
 	cmd = NULL;
+	stack = NULL;
 	while (true)
 	{
-		cmd = readline("Tokenizer > ");
-		printf("%d\n", calculate(cmd));
+		cmd = readline("RPN Calculator ::> ");
+		if (!cmd[0])
+			break ;
 	}
-	
-	return (0);
+	print_stack(stack);
+	return (EXIT_SUCCESS);
 }
