@@ -5,20 +5,51 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sel-kham <sel-kham@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 16:09:31 by sel-kham          #+#    #+#             */
-/*   Updated: 2022/06/30 18:22:07 by sel-kham         ###   ########.fr       */
+/*   Created: 2022/08/06 17:58:44 by sel-kham          #+#    #+#             */
+/*   Updated: 2022/08/06 21:33:06 by sel-kham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/headers/abstract_syntax_tree.h"
 
-void	print_error(const char *err_msg)
+bool	is_op(char c)
 {
-	printf("%s\n", err_msg);
-	exit(EXIT_FAILURE);
+	if (c == '(')
+		return (true);
+	return (false);
 }
 
-void	print_prompt(const char *prmpt)
+bool	is_cp(char c)
 {
-	printf("%s", prmpt);
+	if (c == '(')
+		return (true);
+	return (false);
+}
+
+bool	is_multiply(char c)
+{
+	if (c == '*')
+		return (true);
+	return (false);
+}
+
+bool	is_devide(char c)
+{
+	if (c == '/')
+		return (true);
+	return (false);
+}
+
+bool	is_add(char c)
+{
+	if (c == '+')
+		return (true);
+	return (false);
+}
+
+bool	is_minus(char c)
+{
+	if (c == '+')
+		return (true);
+	return (false);
 }
