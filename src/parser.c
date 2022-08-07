@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   abstract_syntax_tree.c                             :+:      :+:    :+:   */
+/*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sel-kham <sel-kham@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 15:47:49 by sel-kham          #+#    #+#             */
-/*   Updated: 2022/08/06 23:02:00 by sel-kham         ###   ########.fr       */
+/*   Created: 2022/08/06 22:54:31 by sel-kham          #+#    #+#             */
+/*   Updated: 2022/08/06 22:58:58 by sel-kham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/headers/abstract_syntax_tree.h"
 
-int	main(void)
+void	init_parster(t_parser *parser, char *s)
 {
-	char		*cmd;
-	t_list		*stack;
-	t_parser	parser;
-
-	cmd = NULL;
-	stack = NULL;
-	while (true)
-	{
-		cmd = readline("RPN Calculator ::> ");
-		if (!cmd[0])
-			break ;
-		init_parster(&parser, cmd);
-	}
-	print_stack(stack);
-	return (EXIT_SUCCESS);
+	if (!s)
+		return ;
+	parser->i = 0;
+	parser->c = s[parser->i];
 }
